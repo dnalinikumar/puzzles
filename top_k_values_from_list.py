@@ -17,7 +17,7 @@ def top_k_max_values_in_a_list(myList, k):
     for i in myList[k:]:
         value = min(top_k_max_list)
 
-        if (i > value):
+        if i > value:
             index = top_k_max_list.index(value)
             top_k_max_list[index] = i
 
