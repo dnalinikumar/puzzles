@@ -6,7 +6,7 @@ Return the input list if the list has smaller number of elements.
 '''
 def top_k_max_values_in_a_list(myList, k):
 
-    if (k > len(myList)):
+    if k > len(myList):
         return myList
 
     # copy first items of source to target
