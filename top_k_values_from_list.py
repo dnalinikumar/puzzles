@@ -1,4 +1,5 @@
 #! /usr/local/bin/python
+''' tested with Python 3.7.0 '''
 
 '''
 Given a list of numbers, find top k maximum values.
@@ -14,9 +15,10 @@ def top_k_max_values_in_a_list(myList, k):
 
     # check for the rest of the elements
     for i in myList[k:]:
-        index, value = min(enumerate(top_k_max_list), key=lambda x: x[1])
+        value = min(top_k_max_list)
 
         if (i > value):
+            index = top_k_max_list.index(value)
             top_k_max_list[index] = i
 
     return top_k_max_list
