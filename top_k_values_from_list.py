@@ -6,6 +6,8 @@ Given a list of numbers, find top k maximum values.
 Return the input list if the list has smaller number of elements.
 '''
 def top_k_max_values_in_a_list(myList, k):
+    
+    # Not added checks here to validate myList and k.
 
     if k > len(myList):
         return myList
