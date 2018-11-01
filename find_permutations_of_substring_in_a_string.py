@@ -38,7 +38,7 @@ def find_permutations_of_substring_in_a_string(longStr, shortStr):
     if shortDict == snippetDict:
         result.append(snippet)
 
-    # iterate through rest character by character.
+    # iterate through rest of long string, character by character.
     j = 0
     for i in range(shortLen, longLen):
 
