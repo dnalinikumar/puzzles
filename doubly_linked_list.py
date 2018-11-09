@@ -2,8 +2,7 @@
 ''' tested with Python 3.7.0 '''
 
 '''
-Given a list of numbers, find top k maximum values.
-Return the input list if the list has smaller number of elements.
+Doubly linked list operations.
 '''
 
 class Node:
