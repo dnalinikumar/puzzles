@@ -5,12 +5,15 @@
 Doubly linked list operations.
 '''
 
+# Double Linked List Node
 class Node:
     def __init__(self, data):
+        '''constructor'''
         self.data = data
         self.next = None
         self.prev = None
 
+# Double Linked List class
 class DoublyLinkedList:
 
     def __init__(self):
