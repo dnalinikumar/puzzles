@@ -79,6 +79,18 @@ class SinglyLinkedList:
             iter = iter.next
             count += 1
 
+    def getNumberFromNodes(self):
+        ''' get the number from linked list nodes'''
+        iter = self.__head
+        data = 0
+
+        while iter is not None:
+            data = data * 10 + iter.data
+            iter = iter.next
+
+        return data
+
+
 d = SinglyLinkedList()
 
 # Add new nodes at the tail with some duplicate data
@@ -111,5 +123,23 @@ print("traverse through all the links")
 
 d.printDataReverse()
 print("print data in reverse\n")
+
+#------------- add two numbers in two linked lists ------
+
+x = SinglyLinkedList()
+y = SinglyLinkedList()
+
+x.addNode(5)
+x.addNode(6)
+x.addNode(2)
+x.addNode(1)
+xNum = x.getNumberFromNodes()
+
+y.addNode(9)
+y.addNode(8)
+y.addNode(7)
+yNum = y.getNumberFromNodes()
+
+print(xNum + yNum)
 
 
