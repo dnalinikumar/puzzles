@@ -9,14 +9,12 @@ def longest_substring_without_repeat_chars(s):
         if i not in try_longest:
             try_longest += i
         else:
-            if len(try_longest) > max_len:
-                max_len = len(try_longest)
-                longest = try_longest
-            try_longest = i
+            index = try_longest.index(i)
+            try_longest = try_longest[index+1:] + i
 
-    if len(try_longest) > max_len:
-        max_len = len(try_longest)
-        longest = try_longest
+        if (len(try_longest) > max_len):
+            max_len = len(try_longest)
+            longest = try_longest
 
     return max_len, longest
 
