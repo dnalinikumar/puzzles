@@ -14,6 +14,9 @@ def longest_palindrome_substring(s):
             print((f'x={x}'))
             xLen = len(x)
 
+            if (xLen < max_len):
+                return max_len, palindrome
+
             for k in range(xLen//2):
                 if (x[k] != x[xLen-1-k]):
                     break
@@ -23,6 +26,8 @@ def longest_palindrome_substring(s):
                     palindrome.append(x)
 
     return max_len, palindrome
+
+
 
 s = "pttwekewxyqyx"
 print(longest_palindrome_substring(s))
