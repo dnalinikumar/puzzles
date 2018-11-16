@@ -109,45 +109,46 @@ class DoublyLinkedList:
             iter = iter.next
             count += 1
 
-d = DoublyLinkedList()
+if __name__ == "__main__":
+    d = DoublyLinkedList()
 
-# Add new nodes at the tail with some duplicate data
-d.addTailNode(5)
-d.addTailNode(6)
-d.addTailNode(7)
-d.addTailNode(8)
-d.addTailNode(9)
-d.addTailNode(9)
-d.addTailNode(9)
-d.addTailNode(9)
-d.addTailNode(10)
-d.printData()
-print("added new nodes to Tail")
+    # Add new nodes at the tail with some duplicate data
+    d.addTailNode(5)
+    d.addTailNode(6)
+    d.addTailNode(7)
+    d.addTailNode(8)
+    d.addTailNode(9)
+    d.addTailNode(9)
+    d.addTailNode(9)
+    d.addTailNode(9)
+    d.addTailNode(10)
+    d.printData()
+    print("added new nodes to Tail")
 
-d.addHeadNode(4)
-d.printData()
-print("added new data at head")
+    d.addHeadNode(4)
+    d.printData()
+    print("added new data at head")
 
-print(d.deleteHeadNode())
-d.printData()
-print("Deleted Head node")
+    print(d.deleteHeadNode())
+    d.printData()
+    print("Deleted Head node")
 
-print(d.deleteTailNode())
-d.printData()
-print("Deleted tail node")
+    print(d.deleteTailNode())
+    d.printData()
+    print("Deleted tail node")
 
-d.deleteNode(9)
-d.printData()
-print("Deleted one node with some data")
+    d.deleteNode(9)
+    d.printData()
+    print("Deleted one node with some data")
 
-d.deleteNode(9, all=True)
-d.printData()
-print("Deleted all nodes with same data")
+    d.deleteNode(9, all=True)
+    d.printData()
+    print("Deleted all nodes with same data")
 
-d.traverse()
-print("traverse through all the links")
+    d.traverse()
+    print("traverse through all the links")
 
-d.printDataReverse()
-print("print data in reverse\n")
+    d.printDataReverse()
+    print("print data in reverse\n")
 
 

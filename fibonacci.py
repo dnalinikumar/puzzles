@@ -31,9 +31,9 @@ def fib_memo(n, memo):
         return memo[n-1] + memo[n-2]
 
 
+if __name__ == "__main__":
+    # Test
+    print (fib_iter(10))
 
-# Test
-print (fib_iter(10))
-
-memo = [None] * 10
-print (fib_memo(10, memo))
+    memo = [None] * 10
+    print (fib_memo(10, memo))

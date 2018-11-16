@@ -56,17 +56,16 @@ def find_median_of_sorted_arrays_of_diff_sizes(x, y):
 
     raise ValueError
 
-x = [1, 3, 8, 9, 15]
-y = [7, 11, 19, 21, 24, 25]
+if __name__ == "__main__":
+    x = [1, 3, 8, 9, 15]
+    y = [7, 11, 19, 21, 24, 25]
+    print(find_median_of_sorted_arrays_of_diff_sizes(x, y))
 
-print(find_median_of_sorted_arrays_of_diff_sizes(x, y))
+    x = [1]
+    y = [3, 8, 7, 9, 11, 15, 19, 21, 24, 25]
+    print(find_median_of_sorted_arrays_of_diff_sizes(x, y))
 
-x = [1]
-y = [3, 8, 7, 9, 11, 15, 19, 21, 24, 25]
-
-print(find_median_of_sorted_arrays_of_diff_sizes(x, y))
-
-x = [1, 19, 21, 24, 25]
-y = [3, 8, 7, 9, 11, 15]
-print(find_median_of_sorted_arrays_of_diff_sizes(x, y))
+    x = [1, 19, 21, 24, 25]
+    y = [3, 8, 7, 9, 11, 15]
+    print(find_median_of_sorted_arrays_of_diff_sizes(x, y))
 
