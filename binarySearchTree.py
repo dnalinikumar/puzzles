@@ -47,7 +47,7 @@ class BinarySearchTree:
 
         try:
             insertNode(self.root, data)
-        except ValueError:
+        except:
             return False
         else:
             self.size += 1
