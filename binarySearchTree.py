@@ -47,7 +47,7 @@ class BinarySearchTree:
 
         try:
             insertNode(self.root, data)
-        except ValueError:
+        except:
             return False
         else:
             self.size += 1
@@ -102,7 +102,7 @@ class BinarySearchTree:
                     prev.left = iter.left
                 elif prev.right == iter:
                     prev.right = iter.left
-            else:                               # have both right children
+            else:                               # have both left and right children
                 if prev.left == iter:           # left side of its parent
                     prev1 = iter = iter.right
                     while iter.left:
@@ -132,11 +132,12 @@ class BinarySearchTree:
                         iter.right = prev.right.right
                         iter.left = prev.right.left
                         prev.right = iter
-
+                        
+            self.size -= 1
             return True
 
     def inorderTraversal(self):
-        '''Inorder traversal.'''
+        '''In order traversal.'''
         def inorder(node):
             if node is not None:
                 inorder(node.left)
@@ -146,7 +147,7 @@ class BinarySearchTree:
         inorder(self.root)
 
     def preorderTraversal(self):
-        '''Inorder traversal.'''
+        '''pre order traversal.'''
         def preorder(node):
             if node is not None:
                 print(' ', node.data, end='')
@@ -156,7 +157,7 @@ class BinarySearchTree:
         preorder(self.root)
 
     def postorderTraversal(self):
-        '''Inorder traversal.'''
+        '''post order traversal.'''
         def postorder(node):
             if node is not None:
                 postorder(node.right)
