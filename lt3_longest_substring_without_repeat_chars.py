@@ -45,6 +45,12 @@ def longest_substring_without_repeat_chars(s):
     return max_len, longest
 
 
-if __name__ == '__main__'
-    s = "abcdefabcdghijklmnopqera"
-    print(longest_substring_without_repeat_chars(s))
+if __name__ == '__main__':
+    print(longest_substring_without_repeat_chars('abcabcbb'))
+
+    print(longest_substring_without_repeat_chars('bbbbb'))
+
+    print(longest_substring_without_repeat_chars('pwwkew'))
+
+    print(longest_substring_without_repeat_chars('abcdefabcdghijklmnopqera'))
+
