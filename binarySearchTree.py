@@ -103,7 +103,7 @@ class BinarySearchTree:
                 elif prev.right == iter:
                     prev.right = iter.left
             else:                               # have both right children
-                if prev.left == iter:
+                if prev.left == iter:           # left side of its parent
                     prev1 = iter = iter.right
                     while iter.left:
                         prev1 = iter
@@ -118,7 +118,7 @@ class BinarySearchTree:
                         iter.left = prev.left.left
                         prev.left = iter
 
-                elif prev.right == iter:
+                elif prev.right == iter:        # right side of its parent
                     prev1 = iter = iter.left
                     while iter.right:
                         prev1 = iter
