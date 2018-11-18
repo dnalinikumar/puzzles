@@ -26,6 +26,11 @@ rotate 2 steps to the right: [3,99,-1,-100]
 
 def rotate_array(l, k):
     n = len(l)
+    if n <= k:
+        return l
+    elif k > n:
+        k = k%n + 1
+
     for i in range(k):
         temp = l[n-k+i]
         l[i+1:n-k+i+1] = l[i:n-k+i]
@@ -37,3 +42,8 @@ if __name__ == '__main__':
     print(rotate_array([1,2,3,4,5,6,7], 3))
 
     print(rotate_array([-1,-100,3,99], 2))
+
+    print(rotate_array([1], 1))
+
+    print(rotate_array([1, 2], 3))  # fails in this case. need to check
+
