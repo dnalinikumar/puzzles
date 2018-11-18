@@ -137,7 +137,7 @@ class BinarySearchTree:
             return True
 
     def inorderTraversal(self):
-        '''Inorder traversal.'''
+        '''In order traversal.'''
         def inorder(node):
             if node is not None:
                 inorder(node.left)
@@ -147,7 +147,7 @@ class BinarySearchTree:
         inorder(self.root)
 
     def preorderTraversal(self):
-        '''Inorder traversal.'''
+        '''pre order traversal.'''
         def preorder(node):
             if node is not None:
                 print(' ', node.data, end='')
@@ -157,7 +157,7 @@ class BinarySearchTree:
         preorder(self.root)
 
     def postorderTraversal(self):
-        '''Inorder traversal.'''
+        '''post order traversal.'''
         def postorder(node):
             if node is not None:
                 postorder(node.right)
