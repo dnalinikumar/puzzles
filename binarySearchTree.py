@@ -132,7 +132,8 @@ class BinarySearchTree:
                         iter.right = prev.right.right
                         iter.left = prev.right.left
                         prev.right = iter
-
+                        
+            self.size -= 1
             return True
 
     def inorderTraversal(self):
