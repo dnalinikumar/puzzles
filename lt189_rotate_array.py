@@ -25,7 +25,12 @@ rotate 2 steps to the right: [3,99,-1,-100]
 '''
 
 def rotate_array(l, k):
-
+    n = len(l)
+    for i in range(k):
+        temp = l[n-k+i]
+        l[i+1:n-k+i+1] = l[i:n-k+i]
+        l[i] = temp
+    return l
 
 
 if __name__ == '__main__':
