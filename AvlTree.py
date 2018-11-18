@@ -1,28 +1,63 @@
 #! /usr/local/bin/python
 ''' tested with Python 3.7.0 '''
 
+import binarySearchTree as BST
+
 class Node:
     def __init__(self, data):
         self.data  = data
         self.left  = None
         self.right = None
+        self.height = 0
 
-class BinarySearchTree:
+class AvlTree(BST):
     def __init__(self):
         self.root = None
         self.size = 0
 
-    def min(self):
-        iter = self.root
-        while iter and iter.left:
-            iter = iter.left
-        return iter and iter.data
+    def height(self):
+        if self.root is not None:
+            return -1
+        else:
+            return self.root.height
 
-    def max(self):
-        iter = self.root
-        while iter and iter.right:
-            iter = iter.right
-        return iter and iter.data
+    def leftRotation(self, x):
+        w = x.left
+        x.left = w.right
+        w.right = x
+
+        x.height = max(self.height(x.left), self.height(x.right)) + 1
+        w.height = max(self.height(w.left), self.height(x.height)) + 1
+        return w
+
+    def rightRotation(self, w):
+        x = w.right
+        w.right = x.left
+        x.left = w
+
+        w.height = max(self.height(w.right), self.height(w.right)) + 1
+        x.height = max(self.height(x.left), self.height(x.right)) + 1
+        return x
+
+    def leftRightRotation(self, z):
+        z.left = self.singleRotationRight(z.left)
+        return self.singleRotationLeft(z)
+
+    def rightLeftRotation(self, z):
+        z.right = self.leftRotation(z.right)
+        return self.rightRotation(z)
+
+
+    def insert(self, data):
+        if not self.root:
+            self.root = Node(data)
+            self.height = 1
+        else:
+
+            def insertNode(root, parent, data):
+
+
+
 
     def insert(self, data):
         '''insert a new node into the tree.'''
@@ -136,46 +171,6 @@ class BinarySearchTree:
             self.size -= 1
             return True
 
-    def inorderTraversal(self):
-        '''In order traversal.'''
-        def inorder(node):
-            if node is not None:
-                inorder(node.left)
-                print(' ', node.data, end='')
-                inorder(node.right)
-
-        inorder(self.root)
-
-    def preorderTraversal(self):
-        '''pre order traversal.'''
-        def preorder(node):
-            if node is not None:
-                print(' ', node.data, end='')
-                preorder(node.left)
-                preorder(node.right)
-
-        preorder(self.root)
-
-    def postorderTraversal(self):
-        '''post order traversal.'''
-        def postorder(node):
-            if node is not None:
-                postorder(node.right)
-                postorder(node.left)
-                print(' ', node.data, end='')
-
-        postorder(self.root)
-
-
-def is_mirror(t1, t2):
-    '''check if two binary trees are mirror image to each other.'''
-    if t1 is None and t2 is None:
-        return True
-    else:
-        return t1 and t2 and \
-            t1.data == t2.data and \
-            is_mirror(t1.left, t2.right) and \
-            is_mirror(t1.right, t2.left)
 
 if __name__ == '__main__':
     # Create a binary search tree
