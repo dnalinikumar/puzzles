@@ -19,5 +19,6 @@ def longest_substring_without_repeat_chars(s):
     return max_len, longest
 
 
-s = "abcdefabcdghijklmnopqera"
-print(longest_substring_without_repeat_chars(s))
+if __name__ == '__main__'
+    s = "abcdefabcdghijklmnopqera"
+    print(longest_substring_without_repeat_chars(s))

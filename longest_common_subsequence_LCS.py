@@ -19,11 +19,11 @@ def LCS(X, Y, lenX, lenY):
         return max(LCS(X, Y, lenX-1, lenY), LCS(X, Y, lenX, lenY-1))
 
 
-# Test the results
-
-x = 'ABCBDAB'
-y = 'BDCABA'
-res = LCS(x, y, len(x), len(y))
-print(res)
+if __name__ == "__main__":
+    # Test the results
+    x = 'ABCBDAB'
+    y = 'BDCABA'
+    res = LCS(x, y, len(x), len(y))
+    print(res)
 
 

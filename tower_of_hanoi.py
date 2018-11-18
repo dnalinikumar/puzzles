@@ -20,23 +20,25 @@ def tower_of_hanoi(n, fromPeg, toPeg, auxPeg):
          tower_of_hanoi(n - 1, auxPeg, toPeg, fromPeg)
 
 
-A = [5, 4, 3, 2, 1]
-B = []
-X = []
 
-print('Before:')
-print("From: ", A)
-print("To: ", B)
-print("Auxiliary: ", X)
-print('-------')
+if __name__ == '__main__':
+    A = [5, 4, 3, 2, 1]
+    B = []
+    X = []
+
+    print('Before:')
+    print("From: ", A)
+    print("To: ", B)
+    print("Auxiliary: ", X)
+    print('-------')
 
 
-tower_of_hanoi(len(A), A, B, X)
+    tower_of_hanoi(len(A), A, B, X)
 
-print('After:')
-print("From: ", A)
-print("To: ", B)
-print("Auxiliary: ", X)
+    print('After:')
+    print("From: ", A)
+    print("To: ", B)
+    print("Auxiliary: ", X)
 
 
 

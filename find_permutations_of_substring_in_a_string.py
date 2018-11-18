@@ -66,9 +66,9 @@ def find_permutations_of_substring_in_a_string(longStr, shortStr):
 
     return result
 
-
-res = find_permutations_of_substring_in_a_string("abcdefghsdfasdfaldjflajsdjflkadsjflasdjjfdf", "asdjj")
-print(res)
+if __name__ == "__main__":
+    res = find_permutations_of_substring_in_a_string("abcdefghsdfasdfaldjflajsdjflkadsjflasdjjfdf", "asdjj")
+    print(res)
 
 
 

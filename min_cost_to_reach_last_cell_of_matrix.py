@@ -29,15 +29,16 @@ def min_cost(matrix, m, n, memo):
         return min(memo[(m, n-1)], memo[(m-1, n)] + matrix[m-1][n-1])
 
 
-# Test
-matrix = [
-        [4, 7, 8, 6, 4],
-        [6, 7, 3, 9, 2],
-        [3, 8, 1, 2, 4],
-        [7, 1, 7, 3, 7],
-        [2, 9, 8, 9, 3]
-    ]
+if __name__ == '__main__':
+    # Test
+    matrix = [
+            [4, 7, 8, 6, 4],
+            [6, 7, 3, 9, 2],
+            [3, 8, 1, 2, 4],
+            [7, 1, 7, 3, 7],
+            [2, 9, 8, 9, 3]
+        ]
 
-memo = {}
-print(min_cost(matrix, len(matrix), len(matrix[0]), memo))
-print(memo)
+    memo = {}
+    print(min_cost(matrix, len(matrix), len(matrix[0]), memo))
+    print(memo)

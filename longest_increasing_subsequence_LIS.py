@@ -22,7 +22,8 @@ def LIS(A):
     return max(L)
 
 
-A = [5, 7, 4, -3, 9, 1, 10, 4, 5, 8, 9, 3]
+if __name__ == "__main__":
+    A = [5, 7, 4, -3, 9, 1, 10, 4, 5, 8, 9, 3]
 
-print(LIS(A))
+    print(LIS(A))
 

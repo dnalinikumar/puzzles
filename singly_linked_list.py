@@ -91,55 +91,57 @@ class SinglyLinkedList:
         return data
 
 
-d = SinglyLinkedList()
 
-# Add new nodes at the tail with some duplicate data
-d.addNode(5)
-d.addNode(6)
-d.addNode(7)
-d.addNode(8)
-d.addNode(9)
-d.addNode(9)
-d.addNode(9)
-d.addNode(9)
-d.addNode(10)
-d.printData()
-print("added new nodes")
+if __name__ == '__main__':
+    d = SinglyLinkedList()
 
-print(d.deleteHeadNode())
-d.printData()
-print("Deleted Head node")
+    # Add new nodes at the tail with some duplicate data
+    d.addNode(5)
+    d.addNode(6)
+    d.addNode(7)
+    d.addNode(8)
+    d.addNode(9)
+    d.addNode(9)
+    d.addNode(9)
+    d.addNode(9)
+    d.addNode(10)
+    d.printData()
+    print("added new nodes")
 
-d.deleteNode(9)
-d.printData()
-print("Deleted one node with some data")
+    print(d.deleteHeadNode())
+    d.printData()
+    print("Deleted Head node")
 
-d.deleteNode(9, all=True)
-d.printData()
-print("Deleted all nodes with same data")
+    d.deleteNode(9)
+    d.printData()
+    print("Deleted one node with some data")
 
-d.traverse()
-print("traverse through all the links")
+    d.deleteNode(9, all=True)
+    d.printData()
+    print("Deleted all nodes with same data")
 
-d.printDataReverse()
-print("print data in reverse\n")
+    d.traverse()
+    print("traverse through all the links")
 
-#------------- add two numbers in two linked lists ------
+    d.printDataReverse()
+    print("print data in reverse\n")
 
-x = SinglyLinkedList()
-y = SinglyLinkedList()
+    #------------- add two numbers in two linked lists ------
 
-x.addNode(5)
-x.addNode(6)
-x.addNode(2)
-x.addNode(1)
-xNum = x.getNumberFromNodes()
+    x = SinglyLinkedList()
+    y = SinglyLinkedList()
 
-y.addNode(9)
-y.addNode(8)
-y.addNode(7)
-yNum = y.getNumberFromNodes()
+    x.addNode(5)
+    x.addNode(6)
+    x.addNode(2)
+    x.addNode(1)
+    xNum = x.getNumberFromNodes()
 
-print(xNum + yNum)
+    y.addNode(9)
+    y.addNode(8)
+    y.addNode(7)
+    yNum = y.getNumberFromNodes()
+
+    print(xNum + yNum)
 
 

@@ -26,7 +26,8 @@ def top_k_max_values_in_a_list(myList, k):
     return top_k_max_list
 
 
-# Test
-print (top_k_max_values_in_a_list([3, 0, -3, 5, -5, 23, 2455, 2, 99, 1020, -222, 8], 5))
+if __name__ == '__main__':
+    # Test
+    print (top_k_max_values_in_a_list([3, 0, -3, 5, -5, 23, 2455, 2, 99, 1020, -222, 8], 5))
 
-# outputs the list: [1020, 99, 2455, 8, 23]
+    # outputs the list: [1020, 99, 2455, 8, 23]

@@ -25,7 +25,8 @@ def get_list_indexes_that_match_sum (myList, sum):
     return result
 
 
-# Test list 1
-print (get_list_indexes_that_match_sum([8, 3, 0, -3, 5, -5], 8))
+if __name__ == "__main__":
+    # Test list 1
+    print (get_list_indexes_that_match_sum([8, 3, 0, -3, 5, -5], 8))
 
-# outputs the list: [(0,), (0, 2), (0, 1, 3), (0, 1, 2, 3), (1, 4), (1, 2, 4), (0, 4, 5), (0, 2, 4, 5), (0, 1, 3, 4, 5)]
+    # outputs the list: [(0,), (0, 2), (0, 1, 3), (0, 1, 2, 3), (1, 4), (1, 2, 4), (0, 4, 5), (0, 2, 4, 5), (0, 1, 3, 4, 5)]
