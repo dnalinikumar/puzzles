@@ -102,7 +102,7 @@ class BinarySearchTree:
                     prev.left = iter.left
                 elif prev.right == iter:
                     prev.right = iter.left
-            else:                               # have both right children
+            else:                               # have both left and right children
                 if prev.left == iter:           # left side of its parent
                     prev1 = iter = iter.right
                     while iter.left:
