@@ -171,10 +171,8 @@ def is_mirror(t1, t2):
     '''check if two binary trees are mirror image to each other.'''
     if t1 is None and t2 is None:
         return True
-    elif t1 is None or t2 is None:
-        return False
     else:
-        return \
+        return t1 and t2 and \
             t1.data == t2.data and \
             is_mirror(t1.left, t2.right) and \
             is_mirror(t1.right, t2.left)
